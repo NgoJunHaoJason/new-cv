@@ -1,25 +1,17 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
 
-import { globalCss, HopeProvider } from "@hope-ui/solid";
+import { globalCss, HopeProvider, HopeThemeConfig } from "@hope-ui/solid";
 import { Component } from "solid-js";
 import CurriculumVitae from "src/components/CurriculumVitae";
 
-const globalStyles = globalCss({
-  body: {
-    margin: 0,
-    fontFamily: "$sans",
-  },
-  code: {
-    fontFamily: "$mono",
-  },
-});
+const hopeThemeConfig: HopeThemeConfig = {
+  initialColorMode: "system",
+};
 
 const App: Component = () => {
-  globalStyles();
-
   return (
-    <HopeProvider>
+    <HopeProvider config={hopeThemeConfig}>
       <CurriculumVitae />
     </HopeProvider>
   );
