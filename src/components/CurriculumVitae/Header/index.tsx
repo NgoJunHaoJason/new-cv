@@ -15,10 +15,12 @@ import { VsGithubAlt } from "solid-icons/vs";
 import { Component } from "solid-js";
 
 import ProfilePictureSrc from "src/assets/images/profile_picture.png";
+import GitHubCorner from "src/components/CurriculumVitae/Header/GitHubCorner";
 
 const Header: Component = () => {
   return (
     <Box>
+      <GitHubCorner />
       <ProfilePicture />
       <Center>
         <Heading size="2xl">Jason Ngo</Heading>

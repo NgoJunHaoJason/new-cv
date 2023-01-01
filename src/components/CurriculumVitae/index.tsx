@@ -1,6 +1,6 @@
 import { Divider } from "@hope-ui/solid";
 import type { Component } from "solid-js";
-import Header from "src/CurriculumVitae/Header";
+import Header from "src/components/CurriculumVitae/Header";
 
 const CurriculumVitae: Component = () => {
   return (
