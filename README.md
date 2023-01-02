@@ -1,6 +1,6 @@
 # My Curriculum Vitae
 
-[![codecov](https://codecov.io/gh/NgoJunHaoJason/NgoJunHaoJason.github.io/branch/develop/graph/badge.svg?token=BMW650QJ29)](https://codecov.io/gh/NgoJunHaoJason/NgoJunHaoJason.github.io)
+[![codecov](https://codecov.io/gh/NgoJunHaoJason/new-cv/branch/develop/graph/badge.svg?token=EAJJ5U1YMC)](https://codecov.io/gh/NgoJunHaoJason/new-cv)
 
 [view my CV here](https://ngojunhaojason.github.io)
 
