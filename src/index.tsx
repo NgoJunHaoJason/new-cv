@@ -1,20 +1,35 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
 
-import { globalCss, HopeProvider, HopeThemeConfig } from "@hope-ui/solid";
 import { Component } from "solid-js";
 import CurriculumVitae from "src/components/CurriculumVitae";
+import { createGlobalStyles } from "solid-styled-components";
 
-const hopeThemeConfig: HopeThemeConfig = {
-  initialColorMode: "system",
-};
+const GlobalStyles = createGlobalStyles`
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
 
-const App: Component = () => {
-  return (
-    <HopeProvider config={hopeThemeConfig}>
-      <CurriculumVitae />
-    </HopeProvider>
-  );
-};
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+`;
+
+const App: Component = () => (
+  <>
+    <GlobalStyles />
+    <CurriculumVitae />
+  </>
+);
 
 render(() => <App />, document.getElementById("root") as HTMLElement);

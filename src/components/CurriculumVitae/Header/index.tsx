@@ -1,87 +1,32 @@
-import {
-  Box,
-  Center,
-  Heading,
-  Image,
-  List,
-  ListIcon,
-  ListItem,
-} from "@hope-ui/solid";
-import { AiOutlineLinkedin } from "solid-icons/ai";
-import { BsFilePdf } from "solid-icons/bs";
-import { HiOutlineMail } from "solid-icons/hi";
-import { VsGithubAlt } from "solid-icons/vs";
 import { Component } from "solid-js";
-
 import ProfilePictureSrc from "src/assets/images/profile_picture.png";
 import GitHubCorner from "src/components/CurriculumVitae/Header/GitHubCorner";
-import CustomAnchor from "src/components/shared/CustomAnchor";
+import HeaderInformation from "src/components/CurriculumVitae/Header/HeaderInformation";
+import ProfilePicture from "src/components/CurriculumVitae/Header/ProfilePicture";
+import Anchor from "src/components/shared/Anchor";
+import Center from "src/components/shared/Center";
 
-const Header: Component = () => {
-  return (
-    <Box>
-      <GitHubCorner />
-      <ProfilePicture />
-      <Center>
-        <Heading size="2xl">Jason Ngo</Heading>
-      </Center>
-      <Center>
-        <CustomAnchor href="https://manifesto.softwarecraftsmanship.org/">
-          Aspiring Software Craftsman
-        </CustomAnchor>
-      </Center>
-      <br />
+const Header: Component = () => (
+  <div data-testid={headerTestId}>
+    <GitHubCorner />
+    <Center>
+      <ProfilePicture alt="profile picture" src={ProfilePictureSrc} />
+    </Center>
+    <Center>
+      <h1>Jason Ngo</h1>
+    </Center>
+    <Center>
+      <Anchor href="https://manifesto.softwarecraftsmanship.org/">
+        <h3>Aspiring Software Craftsman</h3>
+      </Anchor>
+    </Center>
+    <br />
+    <Center>
       <HeaderInformation />
-    </Box>
-  );
-};
+    </Center>
+  </div>
+);
 
 export default Header;
 
-const ProfilePicture: Component = () => (
-  <Center>
-    <Image
-      alt="profile picture"
-      borderColor="lightgray"
-      borderRadius="$sm"
-      borderStyle="solid"
-      borderWidth="thin"
-      boxSize="$20"
-      src={ProfilePictureSrc}
-    />
-  </Center>
-);
-
-const HeaderInformation: Component = () => (
-  <Center>
-    <List>
-      <ListItem>
-        <CustomAnchor href="mailto:njhjason@protonmail.com">
-          <ListIcon as={HiOutlineMail} />
-          njhjason@protonmail.com
-        </CustomAnchor>
-      </ListItem>
-
-      <ListItem>
-        <CustomAnchor href="https://github.com/NgoJunHaoJason">
-          <ListIcon as={VsGithubAlt} />
-          GitHub profile
-        </CustomAnchor>
-      </ListItem>
-
-      <ListItem>
-        <CustomAnchor href="https://www.linkedin.com/in/ngo-jun-hao-jason">
-          <ListIcon as={AiOutlineLinkedin} />
-          LinkedIn profile
-        </CustomAnchor>
-      </ListItem>
-
-      <ListItem>
-        <CustomAnchor href="./documents/ngo_jun_hao_jason_curriculum_vitae.pdf">
-          <ListIcon as={BsFilePdf} />
-          PDF version
-        </CustomAnchor>
-      </ListItem>
-    </List>
-  </Center>
-);
+export const headerTestId = "header";

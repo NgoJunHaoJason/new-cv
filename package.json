@@ -1,29 +1,35 @@
 {
-  "name": "vite-template-solid",
+  "name": "my-cv",
   "version": "0.0.0",
   "description": "Jason's CV",
+  "license": "MIT",
   "homepage": ".",
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b main -d dist"
   },
-  "license": "MIT",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
     "@types/node": "^18.11.18",
+    "@vitest/coverage-c8": "^0.26.3",
     "gh-pages": "^4.0.0",
+    "jsdom": "^20.0.3",
+    "solid-testing-library": "^0.5.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.3",
-    "vite-plugin-solid": "^2.5.0"
+    "vite-plugin-solid": "^2.5.0",
+    "vitest": "^0.26.3"
   },
   "dependencies": {
-    "@hope-ui/solid": "^0.6.7",
-    "@stitches/core": "^1.2.8",
     "solid-icons": "^1.0.4",
     "solid-js": "^1.6.6",
+    "solid-styled-components": "^0.28.5",
     "solid-transition-group": "^0.0.10"
   }
 }

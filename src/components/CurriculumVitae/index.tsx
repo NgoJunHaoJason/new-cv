@@ -1,18 +1,25 @@
-import { Box, Divider, useColorModeValue } from "@hope-ui/solid";
 import type { Component } from "solid-js";
+import { styled } from "solid-styled-components";
 import Header from "src/components/CurriculumVitae/Header";
 
 const CurriculumVitae: Component = () => {
-  const backgroundColor = useColorModeValue("white", "#303030");
   return (
-    <Box backgroundColor={backgroundColor()}>
+    <StyledCurriculumVitae>
       <br />
       <Header />
       <br />
-      <Divider />
+      <hr />
       <h1>Hello World</h1>
-    </Box>
+    </StyledCurriculumVitae>
   );
 };
 
 export default CurriculumVitae;
+
+const StyledCurriculumVitae = styled.div`
+  background-color: white;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #303030;
+  }
+`;
