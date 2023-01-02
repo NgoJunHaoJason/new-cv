@@ -1,6 +1,7 @@
 import type { Component } from "solid-js";
 import { styled } from "solid-styled-components";
 import Header from "src/components/CurriculumVitae/Header";
+import Divider from "src/components/shared/Divider";
 
 const CurriculumVitae: Component = () => {
   return (
@@ -8,7 +9,7 @@ const CurriculumVitae: Component = () => {
       <br />
       <Header />
       <br />
-      <hr />
+      <Divider />
       <h1>Hello World</h1>
     </StyledCurriculumVitae>
   );

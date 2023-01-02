@@ -1,39 +1,92 @@
 import { Component } from "solid-js";
-import Anchor from "src/components/shared/Anchor";
-import "./index.css";
+import { styled } from "solid-styled-components";
 
 // reference: https://tholman.com/github-corners/
 const GitHubCorner: Component = () => (
-  <div data-testid={githubCornerTestId} class="GitHubCorner">
-    <Anchor href="https://github.com/NgoJunHaoJason/NgoJunHaoJason.github.io">
-      <GitHubCornerPicture />
-    </Anchor>
-  </div>
+  <GitHubCornerPicture
+    data-testid={githubCornerTestId}
+    class="github-corner"
+    viewBox="0 0 250 250"
+  >
+    <Outline />
+    <OctocatArm />
+    <OctocatBody />
+  </GitHubCornerPicture>
 );
 
 export default GitHubCorner;
 
 export const githubCornerTestId = "github-corner";
 
-const GitHubCornerPicture: Component = () => (
-  <svg class="GitHubCornerPicture" width="80" height="80" viewBox="0 0 250 250">
-    <Outline />
-    <OctocatArm />
-    <OctocatBody />
-  </svg>
-);
+const GitHubCornerPicture = styled.svg`
+  color: white;
+  fill: steelblue;
+  position: absolute;
+  border: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+
+  &:hover {
+    fill: #0096ff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    fill: aqua;
+
+    &:hover {
+      fill: darkturquoise;
+    }
+  }
+`;
 
 const Outline: Component = () => (
   <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
 );
 
 const OctocatArm: Component = () => (
-  <path
-    class="OctoArm"
+  <StyledOctocatArm
     fill="currentColor"
     d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
   />
 );
+
+const StyledOctocatArm = styled.path`
+  transform-origin: 130px 106px;
+
+  .github-corner:hover & {
+    animation: OctocatWave 560ms ease-in-out;
+  }
+
+  @keyframes OctocatWave {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+
+    20%,
+    60% {
+      transform: rotate(-25deg);
+    }
+
+    40%,
+    80% {
+      transform: rotate(10deg);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .github-corner:hover & {
+      animation: none;
+    }
+
+    .github-corner & {
+      animation: OctocatWave 560ms ease-in-out;
+    }
+  }
+`;
 
 const OctocatBody: Component = () => (
   <path

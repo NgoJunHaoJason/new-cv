@@ -8,18 +8,24 @@ import Center from "src/components/shared/Center";
 
 const Header: Component = () => (
   <div data-testid={headerTestId}>
-    <GitHubCorner />
+    <Anchor href="https://github.com/NgoJunHaoJason/NgoJunHaoJason.github.io">
+      <GitHubCorner />
+    </Anchor>
+
     <Center>
       <ProfilePicture alt="profile picture" src={ProfilePictureSrc} />
     </Center>
+
     <Center>
       <h1>Jason Ngo</h1>
     </Center>
+
     <Center>
       <Anchor href="https://manifesto.softwarecraftsmanship.org/">
         <h3>Aspiring Software Craftsman</h3>
       </Anchor>
     </Center>
+
     <br />
     <Center>
       <HeaderInformation />
