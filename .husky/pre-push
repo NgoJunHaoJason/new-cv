@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run predeploy
+commit_message=$(git log -1 --pretty=%B)
+npm run deploy -- -m "$commit_message"
