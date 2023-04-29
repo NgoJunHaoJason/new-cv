@@ -1,9 +1,10 @@
 import type { Component } from 'solid-js'
 import Education from 'src/components/CurriculumVitae/Education'
 import Experience from 'src/components/CurriculumVitae/Experience'
+import Favorites from 'src/components/CurriculumVitae/Favorites'
 import Header from 'src/components/CurriculumVitae/Header'
 import Projects from 'src/components/CurriculumVitae/Projects'
-import Divider from 'src/components/shared/Divider'
+import { TopBottomDivider } from 'src/components/shared/Divider'
 
 const CurriculumVitae: Component = () => {
   return (
@@ -12,15 +13,19 @@ const CurriculumVitae: Component = () => {
       <Header />
 
       <br />
-      <Divider />
+      <TopBottomDivider />
       <Experience />
 
       <br />
-      <Divider />
+      <TopBottomDivider />
       <Education />
 
       <br />
-      <Divider />
+      <TopBottomDivider />
+      <Favorites />
+
+      <br />
+      <TopBottomDivider />
       <Projects />
     </>
   )

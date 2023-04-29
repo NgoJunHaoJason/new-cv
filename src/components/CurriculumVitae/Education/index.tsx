@@ -3,12 +3,13 @@ import { type Component } from 'solid-js'
 import Center from 'src/components/shared/Center'
 import Row from 'src/components/shared/Row'
 import Section from 'src/components/shared/Section'
+import { Heading } from 'src/components/shared/Typography'
 
 const Education: Component = () => (
   <Section>
     <Row>
       <HiOutlineAcademicCap size={32} />
-      <h1>Education</h1>
+      <Heading>Education</Heading>
     </Row>
     <br />
 
