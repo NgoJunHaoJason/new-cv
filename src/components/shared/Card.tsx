@@ -1,11 +1,13 @@
 import { styled } from 'solid-styled-components'
 
-const ProfilePicture = styled.img`
+const Card = styled.div`
   border-color: lightgray;
   border-radius: 8px;
   border-style: solid;
   border-width: 1px;
-  width: 80px;
+  box-shadow: 0px 1px 1px 0px gainsboro;
+  display: inline-block;
+  padding: 4px 16px;
 `
 
-export default ProfilePicture
+export default Card

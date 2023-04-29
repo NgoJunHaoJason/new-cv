@@ -1,11 +1,10 @@
 /* @refresh reload */
-import { render } from "solid-js/web";
-
-import { Component } from "solid-js";
-import CurriculumVitae from "src/components/CurriculumVitae";
-import { createGlobalStyles } from "solid-styled-components";
-import { I18nContext } from "@solid-primitives/i18n";
-import i18nContext from "src/contexts/i18nContext";
+import { I18nContext } from '@solid-primitives/i18n'
+import { type Component } from 'solid-js'
+import { render } from 'solid-js/web'
+import { createGlobalStyles } from 'solid-styled-components'
+import CurriculumVitae from 'src/components/CurriculumVitae'
+import i18nContext from 'src/contexts/i18nContext'
 
 const GlobalStyles = createGlobalStyles`
   body {
@@ -15,6 +14,12 @@ const GlobalStyles = createGlobalStyles`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    background-color: white;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #303030;
+    }
   }
   
   code {
@@ -32,13 +37,13 @@ const GlobalStyles = createGlobalStyles`
       color: white;
     }
   }
-`;
+`
 
 const App: Component = () => (
   <I18nContext.Provider value={i18nContext}>
     <GlobalStyles />
     <CurriculumVitae />
   </I18nContext.Provider>
-);
+)
 
-render(() => <App />, document.getElementById("root") as HTMLElement);
+render(() => <App />, document.getElementById('root') as HTMLElement)

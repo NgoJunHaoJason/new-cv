@@ -1,26 +1,29 @@
-import type { Component } from "solid-js";
-import { styled } from "solid-styled-components";
-import Header from "src/components/CurriculumVitae/Header";
-import Divider from "src/components/shared/Divider";
+import type { Component } from 'solid-js'
+import Education from 'src/components/CurriculumVitae/Education'
+import Experience from 'src/components/CurriculumVitae/Experience'
+import Header from 'src/components/CurriculumVitae/Header'
+import Projects from 'src/components/CurriculumVitae/Projects'
+import Divider from 'src/components/shared/Divider'
 
 const CurriculumVitae: Component = () => {
   return (
-    <StyledCurriculumVitae>
+    <>
       <br />
       <Header />
+
       <br />
       <Divider />
-      <h1>Hello World</h1>
-    </StyledCurriculumVitae>
-  );
-};
+      <Experience />
 
-export default CurriculumVitae;
+      <br />
+      <Divider />
+      <Education />
 
-const StyledCurriculumVitae = styled.div`
-  background-color: white;
+      <br />
+      <Divider />
+      <Projects />
+    </>
+  )
+}
 
-  @media (prefers-color-scheme: dark) {
-    background-color: #303030;
-  }
-`;
+export default CurriculumVitae
