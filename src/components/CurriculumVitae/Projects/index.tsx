@@ -16,7 +16,9 @@ const Projects: Component = () => (
 
     <Center>
       <Row>
-        <Card>Work-in-progress</Card>
+        <Card>
+          <p>Work-in-progress</p>
+        </Card>
       </Row>
     </Center>
   </Section>

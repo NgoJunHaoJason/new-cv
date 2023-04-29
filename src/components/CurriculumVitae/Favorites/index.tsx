@@ -23,13 +23,13 @@ const Favorites: Component = () => (
       <SubHeading>Practices</SubHeading>
     </Row>
     <Row>
-      <p>Code Review</p>
+      Code Review
       <LeftRightDivider />
-      <p>Refactoring</p>
+      Refactoring
       <LeftRightDivider />
-      <p>Pair Programming</p>
+      Pair Programming
       <LeftRightDivider />
-      <p>Continuous Integration and Continuous Delivery</p>
+      Continuous Integration and Continuous Delivery
     </Row>
   </Section>
 )

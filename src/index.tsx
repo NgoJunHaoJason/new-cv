@@ -16,9 +16,11 @@ const GlobalStyles = createGlobalStyles`
     -moz-osx-font-smoothing: grayscale;
 
     background-color: white;
+    color: black;
 
     @media (prefers-color-scheme: dark) {
       background-color: #303030;
+      color: white;
     }
   }
   
@@ -28,14 +30,7 @@ const GlobalStyles = createGlobalStyles`
   }
 
   h1, h2, h3, h4, h5, h6, p {
-    color: black;
     margin: 0;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    h1, h2, h3, h4, h5, h6, p {
-      color: white;
-    }
   }
 `
 

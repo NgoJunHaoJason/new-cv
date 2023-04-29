@@ -1,9 +1,9 @@
 import { styled } from 'solid-styled-components'
 
 export const LeftRightDivider = styled.div`
-  border-right-color: darkgray;
+  border-right-color: lightgray;
   border-right-style: solid;
-  border-right-width: 2px;
+  border-right-width: 1px;
   margin-right: 4px;
   padding-right: 4px;
 `
