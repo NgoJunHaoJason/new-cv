@@ -9,8 +9,8 @@
 - install/update node modules: `npm i` (clean install: `npm ci`)
 - view locally: `npm start`
 - test: `npm test` (with coverage: `npm run coverage`)
-  - done automatically on commit
+  - done automatically on `git commit`
 - deploy:
   - `npm run deploy -- -m "<commit_message>"`
-  - done automatically on push
-  - add CNAME (can be done in repo's GitHub Pages settings)
+  - done automatically on `git push`
+  - if is standalone: add CNAME (can be done in repo's GitHub Pages settings)
